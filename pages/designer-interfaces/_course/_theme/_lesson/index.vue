@@ -1,3 +1,4 @@
+/* eslint-disable vue/no-v-html */
 <template>
   <div>
     <div id="lesson" v-html="lessonContent"></div>
@@ -7,7 +8,12 @@
 <script>
 import { mapActions } from 'vuex'
 import { readLessonHTML } from '~/assets/js/api'
-import { reviveCardQuiz, reviveRadioQuiz, hideFeedback } from '~/assets/js/quiz'
+import {
+  reviveCardQuiz,
+  reviveRadioQuiz,
+  hideFeedback,
+  reviveCheckboxQuiz,
+} from '~/assets/js/quiz'
 
 export default {
   name: 'LessonIndex',
@@ -20,6 +26,7 @@ export default {
     let currentLesson
 
     try {
+      store.dispatch('courses/setCurrentStates', { courseSlug, themeSlug })
       lessons = await store.dispatch('courses/getLessonsOfTheme', {
         courseSlug,
         themeSlug,
@@ -39,6 +46,7 @@ export default {
     hideFeedback()
     reviveCardQuiz()
     reviveRadioQuiz()
+    reviveCheckboxQuiz()
   },
   methods: {
     ...mapActions('courses', ['getLessonsOfTheme']),
@@ -81,8 +89,14 @@ export default {
   cursor: pointer !important;
 }
 
+.checbox-group:not(.selected) {
+  .quiz__item:before {
+    background-color: transparent !important;
+  }
+}
+
 .quiz__group:not(.selected) {
-  .quiz__item_correct {
+  .quiz__item {
     &:before {
       background-color: transparent !important;
     }
@@ -101,12 +115,12 @@ export default {
 }
 
 .quiz__feedback {
-    // display: initial !important;
+  // display: initial !important;
 
-    .paragraph {
-      opacity: 0.5 !important;
-    }
+  .paragraph {
+    opacity: 0.5 !important;
   }
+}
 
 // Когда на вопрос ответили
 .selected .quiz__group.selected {

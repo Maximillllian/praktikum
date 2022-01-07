@@ -1,5 +1,6 @@
 <template>
   <vs-sidebar v-model="active" relative hover-expand reduce open>
+    <template #logo> Тема: {{ currentTheme.title }} </template>
     <vs-sidebar-item
       v-for="lesson in currentLessons"
       :id="lesson.slug"
@@ -8,11 +9,15 @@
     >
       {{ lesson.title }}
     </vs-sidebar-item>
+    <vs-button border :to="`/${courseName}`">К курсам</vs-button>
+    <vs-button v-if="!isLastTheme" :to="nextThemePath"
+      >Следующая тема</vs-button
+    >
   </vs-sidebar>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 
 export default {
   data() {
@@ -21,7 +26,13 @@ export default {
     }
   },
   computed: {
-    ...mapState('courses', ['currentLessons', 'currentLesson']),
+    ...mapState('courses', [
+      'courseName',
+      'currentTheme',
+      'currentLessons',
+      'currentLesson',
+    ]),
+    ...mapGetters('courses', ['isLastTheme', 'nextThemePath']),
   },
   mounted() {
     this.active = this.currentLesson.slug
@@ -32,7 +43,18 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+aside .reduce {
+  .vs-sidebar__logo {
+    color: transparent !important;
+    // display: none;
+  }
+
+  .vs-button {
+      display: none;
+  }
+}
+
 .vs-sidebar-content {
   height: calc(100vh - 90px) !important;
 }

@@ -43,3 +43,14 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.course {
+}
+</style>

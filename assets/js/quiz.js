@@ -5,6 +5,22 @@ function removeHiddenElements(element) {
   })
 }
 
+function createSubmitButton() {
+    const submitButton = document.createElement('button')
+    const vsButtonClasses = 'vs-button vs-button--null vs-button--size-null vs-button--primary vs-button--default'
+    submitButton.classList.add(...vsButtonClasses.split(' '))
+    // submitButton.style = '--vs-color'
+    submitButton.style.setProperty('background', 'var(--royalBlue)', 'important')
+    
+    const buttonDiv = document.createElement('div')
+    buttonDiv.classList.add('vs-button__content')
+    buttonDiv.style.setProperty('background', 'var(--royalBlue)', 'important')
+    buttonDiv.innerText = 'Проверить'   
+    submitButton.appendChild(buttonDiv)
+
+    return submitButton
+}
+
 export function hideFeedback() {
   const quizFeedback = document.querySelectorAll('.quiz__feedback')
   quizFeedback.forEach((feedback) => {
@@ -63,4 +79,25 @@ export function reviveCardQuiz() {
       removeHiddenElements(quizSection)
     })
   })
+}
+
+export function reviveCheckboxQuiz() {
+    const checkboxInputs = document.querySelectorAll('.checkbox__input')
+    checkboxInputs.forEach(input => {
+        input.removeAttribute('checked')
+        input.removeAttribute('disabled')
+    })
+
+    // const button = createSubmitButton()
+    const checkboxGroups = document.querySelectorAll('.checbox-group')
+    checkboxGroups.forEach(group => {
+        const button = createSubmitButton()
+        group.appendChild(button)
+
+        button.addEventListener('click', (event) => {
+            const quizSection = event.target.parentNode.parentNode
+            quizSection.classList.add('selected')   
+            removeHiddenElements(quizSection)
+        })
+    })
 }
