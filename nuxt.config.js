@@ -1,12 +1,12 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'praktikum',
+    title: 'Яндекс.Стырили',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'ru',
     },
     meta: [
       { charset: 'utf-8' },
@@ -21,7 +21,10 @@ export default {
   css: ['~/assets/css/baseStyles.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/vuesax.js'],
+  plugins: [
+    { src: '~/plugins/vuesax.js' },
+    { src: '~/plugins/vuelidate.js'}
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -35,14 +38,14 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    // baseURL: 'http://localhost:8000/',
+    baseURL: 'https://cryptodeputat.pythonanywhere.com/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -64,6 +67,36 @@ export default {
         exclude: /(node_modules)/,
       })
     },
+  },
+
+  router: {
+    middleware: ['auth']
+  },
+
+  auth: {
+    strategies: {
+      local: {
+        scheme: 'refresh',
+        token: {
+          property: 'access',
+          maxAge: 1800,
+          type: 'Bearer'
+        },
+        refreshToken: {
+          property: 'refresh',
+          data: 'refresh',
+          maxAge: 60 * 60 * 24 * 30
+        },
+        user: {
+          property: false
+        },
+        endpoints: {
+          login: { url: 'api/auth/token/', method: 'post' },
+          refresh: { url: '/api/auth/token/refresh/', method: 'post' },
+          user: { url: '/api/auth/profile/', method: 'get' }
+        }
+      }
+    }
   },
 
   googleFonts: {

@@ -12,6 +12,9 @@ export default {
       active: 'home',
     }
   },
+  created() {
+    this.$router.push('/designer-interfaces')
+  },
 }
 </script>
 

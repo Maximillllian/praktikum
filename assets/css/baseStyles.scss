@@ -1,22 +1,40 @@
 @import './index.scss';
 
 * {
-    font-family: 'Montserrat';
-    color: var(--white) !important; 
+  font-family: 'Montserrat';
+  color: var(--white);
 }
 
 body {
-    background: var(--black);
+  background: var(--black);
 }
 
 a {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 a:hover {
-    color: var(--royalBlue) !important;
+  color: var(--royalBlue) !important;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.35s ease-in-out;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.35s;
+}
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
