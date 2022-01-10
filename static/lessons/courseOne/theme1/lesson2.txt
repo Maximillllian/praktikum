@@ -3,44 +3,43 @@
 <html data-react-helmet="lang" lang="ru">
 <body class="" id="bundle-proficiency" style="--profession-color:#007AFF; --darken-profession-color:rgba(0, 109, 229, 1); --initial-vh:10.57px;">
 <!-- Яндекс — найдётся всё. Может даже ляпы в коде. -->
-<div id="mount"><div class="app"><div class="page proficiency-page"><div class="Toastify"></div><div class="page__content"><div></div><div class="split-view split-view_direction_row proficiency-page__splitview-container"><div class="split-view__pane" style="flex-grow: 786.903;"><div class="scrollable-default scrollable scrollable_theme_light proficiency-page__main"><div></div><div class="scrollable__content-wrapper"><div class="scrollbar-remover scrollable__content-container" style="--scroll-bar-width:17px; --scroll-bar-height:17px;"><div class="scrollable__content"><div class="proficiency-page__main-content-wrapper"><header class="header"></header><section class="lesson proficiency-page__content"><section class="theory-viewer big-theory lesson__theory"><section class="theory-viewer__blocking-layout-block theory-viewer__block theory-viewer__block_type_vertical-layout theory-viewer__block_layout" meta=""><section class="theory-viewer__block theory-viewer__block_type_markdown" meta=""><div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory"><h1>Скачано с сайта boominfo.org | Урок 2. Это нормально</h1><div class="paragraph">В
- обучении новому есть много вдохновляющего — перемены, интерес, выход за
- пределы привычного. В то же время быть начинающим не всегда просто — 
-особенно, когда есть уверенность и признание в другой области.  </div><div class="paragraph">Мы
- примерно понимаем, с какими трудностями ты можешь столкнуться — 
-особенно в первые недели обучения, — и это нормально. То же самое обычно
- происходит, когда устраиваешься на новое место работы. Давай попробуем 
-разобрать основные ощущения, которые ты можешь испытывать в течение 
+<div id="mount"><div class="app"><div class="page proficiency-page"><div class="Toastify"></div><div class="page__content"><div></div><div class="split-view split-view_direction_row proficiency-page__splitview-container"><div class="split-view__pane" style="flex-grow: 786.903;"><div class="scrollable-default scrollable scrollable_theme_light proficiency-page__main"><div></div><div class="scrollable__content-wrapper"><div class="scrollbar-remover scrollable__content-container" style="--scroll-bar-width:17px; --scroll-bar-height:17px;"><div class="scrollable__content"><div class="proficiency-page__main-content-wrapper"><header class="header"></header><section class="lesson proficiency-page__content"><section class="theory-viewer big-theory lesson__theory"><section class="theory-viewer__blocking-layout-block theory-viewer__block theory-viewer__block_type_vertical-layout theory-viewer__block_layout" meta=""><section class="theory-viewer__block theory-viewer__block_type_markdown" meta=""><div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory"><h1>Скачано с сайта boominfo.org | Урок 2. Это нормально</h1><div class="paragraph">В
+ обучении новому есть много вдохновляющего — перемены, интерес, выход за
+ пределы привычного. В то же время быть начинающим не всегда просто — 
+особенно, когда есть уверенность и признание в другой области.  </div><div class="paragraph">Мы
+ примерно понимаем, с какими трудностями ты можешь столкнуться — 
+особенно в первые недели обучения, — и это нормально. То же самое обычно
+ происходит, когда устраиваешься на новое место работы. Давай попробуем 
+разобрать основные ощущения, которые ты можешь испытывать в течение 
 обучения.</div><h1>«Я постоянно делаю ошибки»</h1><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/oshibki_1597062521.png" src="https://pictures.s3.yandex.net/resources/oshibki_1597062521.png"/>
-<div class="paragraph">Сейчас ты в самом начале освоения новой 
-профессии. Так как пока ты ничего не знаешь, любое твоё действие 
-продуктивно — даже если ведёт к ошибке. Ошибки — обязательная часть 
-процесса обучения. Чем дальше ты будешь продвигаться, тем чаще будешь 
+<div class="paragraph">Сейчас ты в самом начале освоения новой 
+профессии. Так как пока ты ничего не знаешь, любое твоё действие 
+продуктивно — даже если ведёт к ошибке. Ошибки — обязательная часть 
+процесса обучения. Чем дальше ты будешь продвигаться, тем чаще будешь 
 вспоминать Сократа и его выражение «я знаю, что ничего не знаю». </div><h1>«У многих ребят получается лучше, чем у     меня»</h1><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/luchshe_menia_1597062603.png" src="https://pictures.s3.yandex.net/resources/luchshe_menia_1597062603.png"/>
-<div class="paragraph">Каждый новичок движется своим путём. Если у 
-кого-то получается быстрее или медленнее, это ничего не говорит о тебе и
- твоих способностях. На освоение одних тем тебе может потребоваться 
+<div class="paragraph">Каждый новичок движется своим путём. Если у 
+кого-то получается быстрее или медленнее, это ничего не говорит о тебе и
+ твоих способностях. На освоение одних тем тебе может потребоваться 
 больше времени и сил, на освоение других — меньше.</div><h1>«Когда у меня не получается, мне становится неинтересно»</h1><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/ne_interesno_1597062667.png" src="https://pictures.s3.yandex.net/resources/ne_interesno_1597062667.png"/>
-<div class="paragraph">Во-первых, то, что ты это за собой замечаешь, уже
- супер. Во-вторых, в периоды отсутствия интереса важно напоминать себе, 
-зачем это всё и почему ты здесь. Не всегда нужно двигаться только на 
+<div class="paragraph">Во-первых, то, что ты это за собой замечаешь, уже
+ супер. Во-вторых, в периоды отсутствия интереса важно напоминать себе, 
+зачем это всё и почему ты здесь. Не всегда нужно двигаться только на 
 энтузиазме — даже в такой творческой сфере, как дизайн.</div><h1>«Когда я перестану быть новичком, все вышеперечисленные пункты перестанут быть актуальными»</h1><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/ne_aktualno_1597062738.png" src="https://pictures.s3.yandex.net/resources/ne_aktualno_1597062738.png"/>
-<div class="paragraph">Когда тебе покажется, что ты больше не новичок, 
-тебе станет сложнее задавать глупые вопросы и ошибаться. Однако быть 
-новичком — это внутренний выбор, который помогает лучше учиться и не 
-подразумевает оценку умственных способностей. Самые крутые профессионалы
- всегда могут войти в состояние новичка, и это не умаляет их умения.</div></div></section></section></section><div class="lesson__markdown-btn"></div></section></div><div></div></div></div></div><section class="scrollbar-default scrollbar scrollbar_vertical scrollbar_hoverable scrollbar_content-hovered scrollable__scrollbar scrollable__scrollbar_type_vertical" style="--scrollbar-offset-size:1000px; --scrollbar-control-size:241.955px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section><section class="scrollbar-default scrollbar scrollbar_horizontal scrollbar_hidden scrollbar_hoverable scrollbar_content-hovered scrollable__scrollbar scrollable__scrollbar_type_horizontal" size="1" style="--scrollbar-offset-size:1445px; --scrollbar-control-size:1445px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section></div></div></div></div></div><div><script async="" data-savepage-src="https://mc.yandex.ru/metrika/tag.js" type="text/javascript"></script></div></div></div>
+<div class="paragraph">Когда тебе покажется, что ты больше не новичок, 
+тебе станет сложнее задавать глупые вопросы и ошибаться. Однако быть 
+новичком — это внутренний выбор, который помогает лучше учиться и не 
+подразумевает оценку умственных способностей. Самые крутые профессионалы
+ всегда могут войти в состояние новичка, и это не умаляет их умения.</div></div></section></section></section><div class="lesson__markdown-btn"></div></section></div><div></div></div></div></div><section class="scrollbar-default scrollbar scrollbar_vertical scrollbar_hoverable scrollbar_content-hovered scrollable__scrollbar scrollable__scrollbar_type_vertical" style="--scrollbar-offset-size:1000px; --scrollbar-control-size:241.955px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section><section class="scrollbar-default scrollbar scrollbar_horizontal scrollbar_hidden scrollbar_hoverable scrollbar_content-hovered scrollable__scrollbar scrollable__scrollbar_type_horizontal" size="1" style="--scrollbar-offset-size:1445px; --scrollbar-control-size:1445px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section></div></div></div></div></div><div><script async="" data-savepage-src="https://mc.yandex.ru/metrika/tag.js" src="https://mc.yandex.ru/metrika/tag.js" type="text/javascript"></script></div></div></div>
 <div id="wizard"></div>
-
-<script async="" data-savepage-src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js"></script>
+<script async="" data-savepage-src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js" src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js"></script>
+<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js"></script>
+<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js"></script>
+<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js"></script>
 <script nonce=""></script>
-<textarea style='min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; letter-spacing: normal; line-height: normal; font-family: "Yandex Sans", Arial, Helvetica, sans-serif; font-weight: 400; font-size: 16px; font-style: normal; tab-size: 8; text-rendering: auto; text-transform: none; width: 206px; text-indent: 0px; padding: 0px; border-width: 0px; box-sizing: border-box;'>x</textarea><iframe aria-hidden="true" data-savepage-key="0-0" data-savepage-sameorigin="" frameborder="0" name="ym-native-frame" srcdoc='&lt;html&gt;&lt;head&gt;
-&lt;base href="https://praktikum.yandex.ru/learn/interface-designer/courses/25fad592-9501-4f63-8505-1328b2b9ce81/sprints/3388/topics/328be9b1-6cf2-4294-a457-58a5928b9866/lessons/e3364e0e-b842-433f-9c82-bab735865f39/"&gt;
-&lt;style id="savepage-cssvariables"&gt;
-  :root {
-  }
-&lt;/style&gt;
+<textarea style='min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; letter-spacing: normal; line-height: normal; font-family: "Yandex Sans", Arial, Helvetica, sans-serif; font-weight: 400; font-size: 16px; font-style: normal; tab-size: 8; text-rendering: auto; text-transform: none; width: 206px; text-indent: 0px; padding: 0px; border-width: 0px; box-sizing: border-box;'>x</textarea><iframe aria-hidden="true" data-savepage-key="0-0" data-savepage-sameorigin="" frameborder="0" name="ym-native-frame" srcdoc='&lt;html&gt;&lt;head&gt;
+&lt;base href="https://praktikum.yandex.ru/learn/interface-designer/courses/25fad592-9501-4f63-8505-1328b2b9ce81/sprints/3388/topics/328be9b1-6cf2-4294-a457-58a5928b9866/lessons/e3364e0e-b842-433f-9c82-bab735865f39/"&gt;
+&lt;style id="savepage-cssvariables"&gt;
+  :root {
+  }
+&lt;/style&gt;
         &lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;' style="opacity: 0 !important; width: 0px !important; height: 0px !important; position: absolute !important; left: 100% !important; bottom: 100% !important; border: 0px !important;" title="ym-native-frame"></iframe></body></html>
