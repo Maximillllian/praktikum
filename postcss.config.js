@@ -1,3 +1,3 @@
-// module.exports =  () => ({
-//     plugins: [require('vuesax')],
-//   })
+module.exports =  () => ({
+    plugins: [require('vuesax')],
+  })
