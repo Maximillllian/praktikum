@@ -76,6 +76,10 @@ export default {
         exclude: /(node_modules)/,
       })
     },
+
+    postcss: {
+      plugins: [require('vuesax')],
+    }
   },
 
   router: {
