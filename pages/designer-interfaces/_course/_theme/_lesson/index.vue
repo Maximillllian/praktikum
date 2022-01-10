@@ -59,6 +59,7 @@ export default {
   // margin-bottom: 50px;
 
   * {
+    color: white !important;
     background-color: var(--black) !important;
   }
 

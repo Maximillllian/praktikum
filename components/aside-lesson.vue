@@ -44,14 +44,25 @@ export default {
 </script>
 
 <style lang="scss">
+.vs-button {
+  transition: all .5s ease-in-out;
+}
+
+.vs-sidebar__logo {
+  transition: all .25s ease-in-out;
+  margin-left: 10px;
+  padding-bottom: 0;
+}
+
 aside .reduce {
   .vs-sidebar__logo {
     color: transparent !important;
-    // display: none;
+    transform: translateX(-200px);
   }
 
   .vs-button {
-      display: none;
+      transform: translateX(-200px);
+      opacity: 0;
   }
 }
 

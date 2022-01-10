@@ -49,6 +49,15 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+
+  @media screen and (max-width: 991.98px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 .course {

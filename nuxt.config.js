@@ -14,11 +14,20 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+
+      // Подключаем стили яндекса
+      { rel: 'stylesheet', href: "//praktikum.s3.yandex.net/praktikum/v0.195.16-1640694944/static/build/vendor.build.css" },
+      { rel: 'stylesheet', href: "//praktikum.s3.yandex.net/praktikum/v0.195.16-1640694944/static/build/trainer.build.css" }
+  ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/css/baseStyles.scss'],
+  css: [
+    '~/assets/css/baseStyles.scss',
+    "~/assets/css/yandex/proficiency.build.css"
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -44,8 +53,8 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // baseURL: 'http://localhost:8000/',
-    baseURL: 'https://cryptodeputat.pythonanywhere.com/'
+    baseURL: 'http://localhost:8000/',
+    // baseURL: 'https://cryptodeputat.pythonanywhere.com/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
