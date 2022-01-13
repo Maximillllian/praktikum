@@ -24,7 +24,7 @@ export default {
   },
 
   server: {
-    // host: '0.0.0.0'
+    host: process.env.HOST || 'localhost'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -57,8 +57,8 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'http://localhost:8000/api/',
-    // baseURL: 'https://cryptodeputat.pythonanywhere.com/'
+    baseURL: process.env.BASE_URL || 'http://localhost:8000/api/',
+    // baseURL: 'https://cryptodeputat.pythonanywhere.com/api'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
