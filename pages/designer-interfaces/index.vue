@@ -23,6 +23,9 @@ export default {
     CourseCard,
     CourseDialog,
   },
+  async asyncData({ store }) {
+    await store.dispatch('courses/getCoursesList')
+  },
   data() {
     return {
       selectedCourse: null,
@@ -48,6 +51,8 @@ export default {
 .courses {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
   gap: 1rem;
 
   @media screen and (max-width: 991.98px) {

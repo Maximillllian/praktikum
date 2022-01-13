@@ -1,38 +1,0 @@
-<!DOCTYPE html>
-
-<html data-react-helmet="lang" lang="ru">
-<body class="" id="bundle-proficiency" style="--profession-color:#007AFF; --darken-profession-color:rgba(0, 109, 229, 1); --initial-vh:10px;">
-<!-- Яндекс — найдётся всё. Может даже ляпы в коде. -->
-<div id="mount"><div class="app"><div class="page proficiency-page"><div class="Toastify"></div><div class="page__content"><div></div><div class="split-view split-view_direction_row proficiency-page__splitview-container"><div class="split-view__pane" style="flex-grow: 752.604;"><div class="scrollable-default scrollable scrollable_theme_light proficiency-page__main"><div></div><div class="scrollable__content-wrapper"><div class="scrollbar-remover scrollable__content-container" style="--scroll-bar-width:17px; --scroll-bar-height:17px;"><div class="scrollable__content"><div class="proficiency-page__main-content-wrapper"><header class="header"></header><section class="lesson proficiency-page__content"><section class="theory-viewer big-theory lesson__theory"><section class="theory-viewer__blocking-layout-block theory-viewer__block theory-viewer__block_type_vertical-layout theory-viewer__block_layout" meta=""><section class="theory-viewer__block theory-viewer__block_type_markdown" meta=""><div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory"><h1>Урок 4. Эстетическая совесть</h1><div class="paragraph">Один
- из «побочных эффектов» насмотренности — это формирование вкуса. Как 
-твоего субъективного, когда ты с первого взгляда будешь понимать, «твоё»
- это или нет, так и объективного. Кажется, что в дизайне трудно быть 
-категоричным и с уверенностью заявлять, что «хорошо», а что «плохо», но 
-здесь тоже есть свои столпы, на которые всегда можно опереться. Это 
-законы и правила, мнение авторитетных дизайнеров с гораздо большей 
-насмотренностью и, конечно, реакция пользователей. </div><div class="paragraph">При
- этом вкус — не перманентная категория. Твои предпочтения будут меняться
- на протяжении всей жизни, и это нормально. И точно так же будут 
-меняться и тренды. Поэтому насмотренность важна для дизайнера любого 
-уровня. Невозможно насмотреться раз и навсегда и пойти заниматься своими
- делами. Мир постоянно меняется, и дизайнеры должны за ним успевать.</div><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/esteticheskaia_sovest_1597151352.png" src="https://pictures.s3.yandex.net/resources/esteticheskaia_sovest_1597151352.png"/>
-<div class="paragraph">Почему всё это так важно? Потому что дизайнеры 
-формируют окружающую среду и во многом влияют на вкусы и привычки людей.
- Часть этих людей — дизайнеры-новички, которые только начинают 
-насматриваться и набираться визуального опыта, чтобы затем тоже 
-формировать чьё-то чувство прекрасного. Немецкий писатель Жан Поль 
-Рихтер сказал: «Вкус — это эстетическая совесть». Так вот насмотренность
- тоже.  </div></div></section></section></section></section></div><div></div></div></div></div><section class="scrollbar-default scrollbar scrollbar_vertical scrollbar_hoverable scrollbar_content-hovered scrollable__scrollbar scrollable__scrollbar_type_vertical" style="--scrollbar-offset-size:1000px; --scrollbar-control-size:686.813px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0.313187;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section><section class="scrollbar-default scrollbar scrollbar_horizontal scrollbar_hidden scrollbar_hoverable scrollbar_content-hovered scrollable__scrollbar scrollable__scrollbar_type_horizontal" size="1" style="--scrollbar-offset-size:1445px; --scrollbar-control-size:1445px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section></div></div></div></div></div><div><script async="" data-savepage-src="https://mc.yandex.ru/metrika/tag.js" src="https://mc.yandex.ru/metrika/tag.js" type="text/javascript"></script></div></div></div>
-<div id="wizard"></div>
-<script async="" data-savepage-src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js" src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js"></script>
-<script nonce=""></script>
-<textarea style='min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; letter-spacing: normal; line-height: normal; font-family: "Yandex Sans", Arial, Helvetica, sans-serif; font-weight: 400; font-size: 16px; font-style: normal; tab-size: 8; text-rendering: auto; text-transform: none; width: 206px; text-indent: 0px; padding: 0px; border-width: 0px; box-sizing: border-box;'>x</textarea><iframe aria-hidden="true" data-savepage-key="0-0" data-savepage-sameorigin="" frameborder="0" name="ym-native-frame" srcdoc='&lt;html&gt;&lt;head&gt;
-&lt;base href="https://praktikum.yandex.ru/learn/interface-designer/courses/c3a2f388-cd1c-425b-a522-b28169d1e054/sprints/3387/topics/90febbdb-74ff-4f35-967a-317039743e79/lessons/e3a9f539-5127-4d6c-8438-2f7b0501361e/"&gt;
-&lt;style id="savepage-cssvariables"&gt;
-  :root {
-  }
-&lt;/style&gt;
-        &lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;' style="opacity: 0 !important; width: 0px !important; height: 0px !important; position: absolute !important; left: 100% !important; bottom: 100% !important; border: 0px !important;" title="ym-native-frame"></iframe></body></html>

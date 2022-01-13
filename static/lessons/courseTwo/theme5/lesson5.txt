@@ -1,81 +1,0 @@
-<!DOCTYPE html>
-
-<html data-react-helmet="lang" lang="ru">
-<body class="" id="bundle-proficiency" style="--profession-color:#007AFF; --darken-profession-color:rgba(0, 109, 229, 1); --initial-vh:10px;">
-<!-- Яндекс — найдётся всё. Может даже ляпы в коде. -->
-<div id="mount"><div class="app"><div class="page proficiency-page"><div class="Toastify"></div><div class="page__content"><div></div><div class="split-view split-view_direction_row proficiency-page__splitview-container"><div class="split-view__pane" style="flex-grow: 777.341;"><div class="scrollable-default scrollable scrollable_theme_light proficiency-page__main"><div></div><div class="scrollable__content-wrapper"><div class="scrollbar-remover scrollable__content-container" style="--scroll-bar-width:17px; --scroll-bar-height:17px;"><div class="scrollable__content"><div class="proficiency-page__main-content-wrapper"><header class="header"></header><section class="lesson proficiency-page__content"><section class="theory-viewer big-theory lesson__theory"><section class="theory-viewer__blocking-layout-block theory-viewer__block theory-viewer__block_type_vertical-layout theory-viewer__block_layout" meta=""><section class="theory-viewer__block theory-viewer__block_type_markdown" meta=""><div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory"><h1>Урок 5. Где ещё искать референсы</h1><div class="paragraph">Мы
- уже говорили, что в твоём мудборде могут быть не только сугубо 
-интерфейсные референсы. Для дизайнеров всё вокруг — учебник, а 
-референсами могут стать фильмы, игры, тени и что угодно ещё. Главное, 
-настроить оптику и постоянно наблюдать за окружающим миром: обращать 
-внимание на рекламные плакаты и вывески, на то, как устроены интерфейсы 
-не только сайтов и приложений, но бытовой техники и объектов 
-общественного пространства, наблюдать за людьми.</div><div class="paragraph">Например,
- в 2019 году дизайнеры из агентства Red Collar делали сайт для 
-конференции Awwwards, которая проходила в Нью-Йорке. Основным элементом 
-они выбрали не Cтатую Cвободы, не небоскрёбы и парки, а хот-дог. Как им 
-пришло это в голову? Всё благодаря умению дизайнеров из Red Collar 
-всматриваться в окружающий мир. Дело в том, что на улицах Нью-Йорка 
-тележки с хот-догами — типичное явление. А для проекта они стали более 
-чем небанальным референсом.</div><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/redcollar_1597660686.png" src="https://pictures.s3.yandex.net/resources/redcollar_1597660686.png"/>
-<h3>Полезные упражнения, которые научат тебя искать и видеть референсы не только в интерфейсах</h3><ul><li><strong>Возьми хорошее и сделай из него плохое.</strong>
- Найди проект, который тебе нравится и, например, поменяй в нём цвета. 
-Работа всё равно осталась привлекательной? Значит, её сила не в этом. 
-Поменяй местами элементы, измени их структуру. Хорошая работа 
-превратилась в плохую? Значит, элемент, на котором всё строится, найден.</li><li><strong>Убери все ограничения.</strong>
- Вот пример. Ещё в детстве нас научили, как нужно завязывать шнурки. 
-Скорее всего, с тех пор этот процесс не подвергался анализу. Подумай, а 
-самый ли оптимальный узел ты используешь? А как часто он развязывается? 
-Часто? Поищи новые способы, попробуй их и выясни, какой лучше. А сколько
- времени у тебя уходит на завязывание? Может быть, есть способ делать 
-это быстрее?</li><li><strong>Напрягай воображение.</strong> Например, 
-почитай о том, как дизайнер решил сделать меню именно бургером, и 
-попробуй найти такие же аналогии для других элементов интерфейса.</li><li><strong>Наблюдай за людьми.</strong>
- Допустим, ты выбираешь что-то в магазине. Обрати внимание, через какое 
-время к тебе подходят продавцы. Им стоит делать это раньше или позже? 
-Успеваешь ли ты всё посмотреть, прежде чем услышишь ту самую фразу «Могу
- я вам чем-то помочь?».</li><li><strong>Делай как можно больше нового.</strong>
- Даже такого, чего больше не собираешься повторять. Напиши сценарий для 
-пьесы, придумай собственный рецепт пиццы, разбери двигатель 
-электросамоката, покрась забор. Всегда задавай себе вопрос: «Что самое 
-сложное в этом процессе, а что даётся легко?». И запоминай.</li><li><strong>Спрашивай себя «На что это похоже?».</strong>
- Например, вспомни логотип Nike и придумай ему несколько трактовок. 
-Повторяй это со всеми необычными логотипами, которые встречаются на 
-твоём пути. Примерно этим же мы занимаемся, когда пытаемся понять, что 
-нам напоминают облака.</li><li><strong>Анализируй — снова и снова.</strong>
- Возьми скриншот из фильма или сериала и проанализируй его, как если бы 
-это был баннер. Почему сцена выстроена так, а не иначе? Какая здесь 
-композиция? Что расположено на переднем плане, а что и почему — на 
-заднем? Так ты поймёшь, как режиссёр управляет взглядом зрителей в этой 
-сцене. Подобным образом можно разбирать и палитры фильмов.</li><li><strong>Наблюдай за окружающим миром.</strong>
- Люди редко задумываются, почему те или иные вещи выглядят так, а не 
-иначе. У тебя должно быть наоборот. Почему на одной обуви шнурки 
-круглые, а на другой плоские? Это только ради внешнего вида или есть 
-другие причины? А почему пожарное ведро конусообразной формы? А 
-существует примерно 5–6 не подтверждённых версий и одна определённая.</li></ul></div></section><section class="theory-viewer__block theory-viewer__block_type_markdown" meta=""><div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory"><div class="quiz-task" style="--quiz-task-background:#D8E4F5 ;"><div class="quiz-task__header">🛠 Мини-проект. Доска настроения
-</div><div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory quiz-task__content" style="padding: 0px;">
-<div class="paragraph">Дизайнерам приходится постоянно напрягать 
-воображение — будь то поиск новых идей или продумывание защиты концепции
- перед клиентом. Каждый такой брейншторм — отличная разминка для мозга. 
-Она даёт возможность глубиннее всмотреться в детали и найти обоснование 
-даже самым абстрактным дизайн-решениям. Давай попробуем.</div><div class="paragraph"><strong>Выбери 2 любых слова из списка:</strong></div><ul><li>страсть;</li><li>спокойствие;</li><li>динамика;</li><li>эпатаж;</li><li>гибкость;</li><li>мягкость;</li><li>влюблённость;</li><li>баланс;</li><li>грубость;</li><li>хаотичность;</li><li>синергия;</li><li>коммуникация;</li><li>контроль;</li><li>деформация.</li></ul><div class="paragraph"><strong>Задание</strong></div><div class="paragraph">Найди
- примеры чужих работ, которые все вместе олицетворяют выбранные тобой 
-слова. Составь два мудборда — по одному на каждое слово.</div><div class="paragraph"><strong>Подсказки:</strong></div><ul><li>если хочешь акцентировать внимание на конкретной детали изображения, ты можешь его обрезать;</li><li>особенно эффектно могут выглядеть мудборды, в которых все примеры выдержаны в одной цветовой гамме.</li></ul><div class="paragraph"><strong>Что конкретно надо сделать</strong></div><ul><li>Выбери 2 любых слова из списка.</li><li>Составь
- ассоциации первого порядка, найди к ним примеры (делай это, где тебе 
-удобнее, — от Google и «Яндекса» до Instagram, Pinterest или 
-Designspiration).</li><li>Там же найди примеры для ассоциаций второго и третьего порядка.</li><li>Создай фрейм в Figma и расположи на нём 2 мудборда, включающих не менее 9 квадратных фотографий (всего — минимум 18).</li></ul><div class="paragraph"><strong>Примерный образ результата:</strong></div><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/tema5_doska_nastroeniia_1597661442.png" src="https://pictures.s3.yandex.net/resources/tema5_doska_nastroeniia_1597661442.png"/>
-</div></div>
-</div></section><div class="content-expander content-expander_expanded theory-viewer__block theory-viewer__block_type_action-button"><button class="button button_size_xl button_type_default button_theme_light button_view_normal button_has-hover-color content-expander__button" style="--button-hover-color:var(--profession-color, $pureBlue);" type="button"><span class="button__text">Все получилось!</span></button></div></section></section><div class="lesson__markdown-btn"></div></section></div><div></div></div></div></div><section class="scrollbar-default scrollbar scrollbar_vertical scrollbar_hoverable scrollbar_content-hovered scrollable__scrollbar scrollable__scrollbar_type_vertical" style="--scrollbar-offset-size:1111px; --scrollbar-control-size:244.804px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0.779743;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section><section class="scrollbar-default scrollbar scrollbar_horizontal scrollbar_hidden scrollbar_hoverable scrollbar_content-hovered scrollable__scrollbar scrollable__scrollbar_type_horizontal" size="1.0006038647342994" style="--scrollbar-offset-size:1659px; --scrollbar-control-size:1660px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section></div></div></div></div></div><div><script async="" data-savepage-src="https://mc.yandex.ru/metrika/tag.js" src="https://mc.yandex.ru/metrika/tag.js" type="text/javascript"></script></div></div></div>
-<div id="wizard"></div>
-<script async="" data-savepage-src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js" src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js"></script>
-<script nonce=""></script>
-<textarea style='min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; letter-spacing: normal; line-height: normal; font-family: "Yandex Sans", Arial, Helvetica, sans-serif; font-weight: 400; font-size: 16px; font-style: normal; tab-size: 8; text-rendering: auto; text-transform: none; width: 204.184px; text-indent: 0px; padding: 0px; border-width: 0px; box-sizing: border-box;'>x</textarea><iframe aria-hidden="true" data-savepage-key="0-0" data-savepage-sameorigin="" frameborder="0" name="ym-native-frame" srcdoc='&lt;html&gt;&lt;head&gt;
-&lt;base href="https://praktikum.yandex.ru/learn/interface-designer/courses/c3a2f388-cd1c-425b-a522-b28169d1e054/sprints/3387/topics/90febbdb-74ff-4f35-967a-317039743e79/lessons/e3a9f539-5127-4d6c-8438-2f7b0501361e/"&gt;
-&lt;style id="savepage-cssvariables"&gt;
-  :root {
-  }
-&lt;/style&gt;
-        &lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;' style="opacity: 0 !important; width: 0px !important; height: 0px !important; position: absolute !important; left: 100% !important; bottom: 100% !important; border: 0px !important;" title="ym-native-frame"></iframe></body></html>

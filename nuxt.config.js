@@ -24,7 +24,7 @@ export default {
   },
 
   server: {
-    host: '0.0.0.0'
+    // host: '0.0.0.0'
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -57,8 +57,8 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // baseURL: 'http://localhost:8000/',
-    baseURL: 'https://cryptodeputat.pythonanywhere.com/'
+    baseURL: 'http://localhost:8000/api/',
+    // baseURL: 'https://cryptodeputat.pythonanywhere.com/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -108,9 +108,9 @@ export default {
           property: false
         },
         endpoints: {
-          login: { url: 'api/auth/token/', method: 'post' },
-          refresh: { url: '/api/auth/token/refresh/', method: 'post' },
-          user: { url: '/api/auth/profile/', method: 'get' }
+          login: { url: '/auth/token/', method: 'post' },
+          refresh: { url: '/auth/token/refresh/', method: 'post' },
+          user: { url: '/auth/profile/', method: 'get' }
         }
       }
     }

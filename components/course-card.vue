@@ -4,7 +4,7 @@
             <h3>{{ course.title }}</h3>
         </template>
         <template #img>
-            <img :src="course.img" alt="">
+            <img :src="course.image" alt="">
         </template>
         <template #text>
             <p>{{ themesCount }} тем/а</p>
@@ -33,3 +33,9 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+img {
+    // max-width: 210px;
+}
+</style>

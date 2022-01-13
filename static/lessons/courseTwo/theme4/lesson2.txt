@@ -1,50 +1,0 @@
-<!DOCTYPE html>
-
-<html data-react-helmet="lang" lang="ru">
-<body class="" id="bundle-proficiency" style="--profession-color:#007AFF; --darken-profession-color:rgba(0, 109, 229, 1); --initial-vh:10px;">
-<!-- Яндекс — найдётся всё. Может даже ляпы в коде. -->
-<div id="mount"><div class="app"><div class="page proficiency-page"><div class="Toastify"></div><div class="page__content"><div></div><div class="split-view split-view_direction_row proficiency-page__splitview-container"><div class="split-view__pane" style="flex-grow: 777.341;"><div class="scrollable-default scrollable scrollable_theme_light proficiency-page__main"><div></div><div class="scrollable__content-wrapper"><div class="scrollbar-remover scrollable__content-container" style="--scroll-bar-width:17px; --scroll-bar-height:17px;"><div class="scrollable__content"><div class="proficiency-page__main-content-wrapper"><header class="header"><div class="header__tabs-revisor-portal"></div></header><section class="lesson proficiency-page__content"><section class="theory-viewer big-theory lesson__theory"><section class="theory-viewer__blocking-layout-block theory-viewer__block theory-viewer__block_type_vertical-layout theory-viewer__block_layout" meta=""><section class="theory-viewer__block theory-viewer__block_type_markdown" meta=""><div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory"><h1>Урок 2. Как анализировать чужие работы</h1><div class="paragraph">Для
- того чтобы насматриваться осознанно, тебе понадобится всего один 
-инструмент. Это вопрос «почему». Почему дизайнер выбрал именно этот 
-цвет? Почему мне это нравится? Почему это решение правильное? Главное — 
-использовать этот вопрос грамотно.</div><div class="paragraph">Приём, который позволяет дизайнеру проанализировать готовый продукт как бы в обратную сторону, называется <strong>реверс-инжинирингом.</strong>
- Если при взгляде на чужую работу у тебя появилась мысль «вау, это 
-прикольно», остановись и попытайся понять, что именно тут прикольно. То 
-же самое нужно делать, когда работа тебе не нравится. Чем чаще ты будешь
- повторять эту процедуру, тем глубиннее будет твоя насмотренность.</div><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/5_pochemu_1597404611.png" src="https://pictures.s3.yandex.net/resources/5_pochemu_1597404611.png"/>
-<div class="paragraph">Ещё один способ «дойти до самой сути», как завещал Пастернак, — <strong>метод пяти «почему»</strong>.
- Это углубление каждого отдельного «почему» из тех, которые появились у 
-тебя на первом этапе. Например, ты спрашиваешь: «Почему эта кнопка 
-такая?» Отвечаешь: «Потому что она должна быть заметной». Теперь задаём 
-вопрос уже к этому утверждению: «А почему она должна быть заметной?» И 
-так пять раз. Да, есть риск, что рассуждение превратится в попытку 
-понять, «что хотел сказать автор», и отыскать скрытые смыслы там, где их
- нет. Но руководствуйся здравым смыслом. Это всего лишь разминка для 
-мозга.</div><div class="paragraph">И последний способ — учитывать как 
-свой пользовательский опыт, так и мнение о продукте других людей. 
-Например, какое приложение открывают твои друзья, когда заскучают? 
-Instagram? Telegram? Tik-Tok? А что тебя больше всего раздражает, когда 
-ты попадаешь на сайт РЖД? Всё это будет записываться у тебя на подкорке и
- распределяться по двум папкам: «Круто, надо не забыть» и «А вот так не 
-надо». Со временем ты начнёшь делать такие ментальные заметки 
-автоматически. Это будет означать, что пути назад нет.</div><img alt="image" class="image image_expandable" data-savepage-src="https://pictures.s3.yandex.net/resources/kak_analizirovat_chuzhie_raboty_1597404666.png" src="https://pictures.s3.yandex.net/resources/kak_analizirovat_chuzhie_raboty_1597404666.png"/>
-<div class="quiz-task" style="--quiz-task-background:#D8E4F5 ;"><div class="quiz-task__header">🛠 Задание под звёздочкой
-</div><div class="base-markdown base-markdown_with-gallery markdown markdown_size_normal markdown_type_theory quiz-task__content" style="padding: 0px;">
-<div class="paragraph">Сходи на любой сайт из нашей подборки ресурсов, 
-выбери 3 примера и попробуй проанализировать их письменно (в любом 
-удобном для тебя месте), опираясь на инструкцию выше. Это твоя первая 
-попытка, поэтому пиши своими словами и так, как считаешь нужным.</div></div></div>
-</div></section><div class="content-expander content-expander_expanded theory-viewer__block theory-viewer__block_type_action-button"><button class="button button_size_xl button_type_default button_theme_light button_view_normal button_has-hover-color content-expander__button" style="--button-hover-color:var(--profession-color, $pureBlue);" type="button"><span class="button__text">Все получилось!</span></button></div></section></section><div class="lesson__markdown-btn"></div></section></div><div></div></div></div></div><section class="scrollbar-default scrollbar scrollbar_vertical scrollbar_hoverable scrollable__scrollbar scrollable__scrollbar_type_vertical" style="--scrollbar-offset-size:1111px; --scrollbar-control-size:375.068px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section><section class="scrollbar-default scrollbar scrollbar_horizontal scrollbar_hidden scrollbar_hoverable scrollable__scrollbar scrollable__scrollbar_type_horizontal" size="1.0006038647342994" style="--scrollbar-offset-size:1659px; --scrollbar-control-size:1660px; --scrollbar-control-container-size:100%; --scrollbar-scale:1; --scrollbar-control-offset:0;"><div class="scrollbar__control-container"><div class="scrollbar__control"><div class="scrollbar__control-line"></div></div></div></section></div></div></div></div></div><div><script async="" data-savepage-src="https://mc.yandex.ru/metrika/tag.js" src="https://mc.yandex.ru/metrika/tag.js" type="text/javascript"></script></div></div></div>
-<div id="wizard"></div>
-<script async="" data-savepage-src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js" src="https://yastatic.net/yandex-video-player-iframe-api/js/video-player-iframe-api-loader.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/vendor.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/common.js"></script>
-<script data-savepage-src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js" src="//yastatic.net/q/praktikum/v0.163.14-1608194662/static/build/proficiency.build.js"></script>
-<script nonce=""></script>
-<textarea style='min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; letter-spacing: normal; line-height: normal; font-family: "Yandex Sans", Arial, Helvetica, sans-serif; font-weight: 400; font-size: 16px; font-style: normal; tab-size: 8; text-rendering: auto; text-transform: none; width: 204.184px; text-indent: 0px; padding: 0px; border-width: 0px; box-sizing: border-box;'>x</textarea><iframe aria-hidden="true" data-savepage-key="0-0" data-savepage-sameorigin="" frameborder="0" name="ym-native-frame" srcdoc='&lt;html&gt;&lt;head&gt;
-&lt;base href="https://praktikum.yandex.ru/learn/interface-designer/courses/c3a2f388-cd1c-425b-a522-b28169d1e054/sprints/3387/topics/90febbdb-74ff-4f35-967a-317039743e79/lessons/e3a9f539-5127-4d6c-8438-2f7b0501361e/"&gt;
-&lt;style id="savepage-cssvariables"&gt;
-  :root {
-  }
-&lt;/style&gt;
-        &lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;' style="opacity: 0 !important; width: 0px !important; height: 0px !important; position: absolute !important; left: 100% !important; bottom: 100% !important; border: 0px !important;" title="ym-native-frame"></iframe></body></html>

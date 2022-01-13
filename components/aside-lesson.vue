@@ -10,35 +10,41 @@
       {{ lesson.title }}
     </vs-sidebar-item>
     <vs-button border :to="`/${courseName}`">К курсам</vs-button>
-    <vs-button v-if="!isLastTheme" :to="nextThemePath"
+    <vs-button v-if="!isLastTheme" :to="`/${courseName}/lesson/${nextThemeFirstLessonSlug}`"
       >Следующая тема</vs-button
     >
   </vs-sidebar>
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
+  // async asyncData({ store, params }) {
+  //   const lessonSlug = params.slug
+  //   console.log('Мы вошли')
+    
+  //   console.log('current theme', currentTheme)
+  //   return { currentTheme }
+  // },
+
   data() {
     return {
       active: '',
     }
   },
+
   computed: {
     ...mapState('courses', [
       'courseName',
-      'currentTheme',
-      'currentLessons',
       'currentLesson',
+      'currentTheme'
     ]),
-    ...mapGetters('courses', ['isLastTheme', 'nextThemePath']),
+    ...mapGetters('courses', ['currentLessons', 'isLastTheme', 'nextThemeFirstLessonSlug'])
   },
+
   mounted() {
     this.active = this.currentLesson.slug
-  },
-  methods: {
-    ...mapActions('courses', ['getCurrentLesson']),
   },
 }
 </script>

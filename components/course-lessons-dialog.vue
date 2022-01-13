@@ -13,25 +13,29 @@
 
       <template #tbody>
         <vs-tr v-for="theme in course.themes" :key="theme.title">
-          <vs-td >{{ theme.title }}</vs-td>
+          <vs-td>{{ theme.title }}</vs-td>
           <vs-td>{{ theme.lessons.length }}</vs-td>
 
           <template #expand>
-              <vs-table id="expanded-table" stripped>
-                  <template #thead>
-                      <vs-tr>
-                          <vs-th>Занятие</vs-th>
-                          <vs-th>Пройдено?</vs-th>
-                      </vs-tr>
-                  </template>
-                  <template #tbody>
-                      <vs-tr v-for="lesson in theme.lessons" :key="lesson.title" @click.prevent="goToCourseLesson(course, theme, lesson)">
-                          <vs-td>{{ lesson.title }}</vs-td>
-                          <vs-td>Нет</vs-td>
-                      </vs-tr>
-                  </template>
-              </vs-table>
-              <!-- <ol>
+            <vs-table id="expanded-table" stripped>
+              <template #thead>
+                <vs-tr>
+                  <vs-th>Занятие</vs-th>
+                  <vs-th>Пройдено?</vs-th>
+                </vs-tr>
+              </template>
+              <template #tbody>
+                <vs-tr
+                  v-for="lesson in theme.lessons"
+                  :key="lesson.title"
+                  @click.prevent="goToCourseLesson(course, theme, lesson)"
+                >
+                  <vs-td>{{ lesson.title }}</vs-td>
+                  <vs-td>Нет</vs-td>
+                </vs-tr>
+              </template>
+            </vs-table>
+            <!-- <ol>
                 <li v-for="(lesson, idx) in theme.lessons" :key="idx">
                   <a @click.prevent="goToCourseLesson(course, theme, lesson)">{{ lesson.title }}</a>
                 </li>
@@ -54,39 +58,14 @@ export default {
     course: {
       type: Object,
       default() {
-        return {
-          title: 'Курс Яндекса!',
-          image: 'img/courses-cards/first.svg',
-          description: 'Это курс',
-          slug: 'course1',
-          themes: {
-            themeOne: {
-              title: 'Тема 1',
-              slug: 'theme1',
-              lessons: [
-                  {title: 'Задание 1', slug: 'lesson1'}, 
-                  {title: 'Задание 2', slug: 'lesson2'}, 
-                  {title: 'Задание 3', slug: 'lesson3'}, 
-                ],
-            },
-            themeTwo: {
-              title: 'Тема 1',
-              slug: 'theme1',
-              lessons: [
-                  {title: 'Задание 1', slug: 'lesson1'}, 
-                  {title: 'Задание 2', slug: 'lesson2'}, 
-                  {title: 'Задание 3', slug: 'lesson3'}, 
-                ],
-            },
-          },
-        }
-      },
+        return {}
+      }
     },
   },
   data() {
-      return {
-          selectedRow: null
-      }
+    return {
+      selectedRow: null,
+    }
   },
   computed: {
     activeCopy() {
@@ -98,22 +77,28 @@ export default {
       this.$emit('update:active', false)
     },
     goToCourseLesson(course, theme, lesson) {
-        this.$router.push(`/designer-interfaces/${course.slug}/${theme.slug}/${lesson.slug}`)
-    }
+      if (lesson.url) {
+        window.open(lesson.url, '_blank').focus()
+      } else {
+        this.$router.push(
+          `/designer-interfaces/lesson/${lesson.slug}`
+        )
+      }
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
 #expanded-table td {
-    padding: 10px;
+  padding: 10px;
 }
 
 #expanded-table tr {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #expanded-table tr:hover td {
-    background-color: var(--shadowRoyalBlue) !important;
+  background-color: var(--shadowRoyalBlue) !important;
 }
 </style>

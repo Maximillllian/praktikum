@@ -1,13 +1,12 @@
 /* eslint-disable vue/no-v-html */
 <template>
   <div>
-    <div id="lesson" v-html="lessonContent"></div>
+    <div id="lesson" v-html="lesson.text"></div>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex'
-import { readLessonHTML } from '~/assets/js/api'
+import { mapState } from 'vuex'
 import {
   reviveCardQuiz,
   reviveRadioQuiz,
@@ -18,38 +17,28 @@ import {
 export default {
   name: 'LessonIndex',
   layout: 'lesson',
-  async asyncData({ store, route, error }) {
-    const pathParams = route.path.split('/')
-    const [lessonSlug, themeSlug, courseSlug] = pathParams.reverse().slice(0, 3)
-    let lessons
-    let lessonContent
-    let currentLesson
-
+  
+  async asyncData({ store, params, error }) {
+    const lessonSlug = params.slug;
+    console.log('params', params)
     try {
-      store.dispatch('courses/setCurrentStates', { courseSlug, themeSlug })
-      lessons = await store.dispatch('courses/getLessonsOfTheme', {
-        courseSlug,
-        themeSlug,
-      })
-      lessonContent = readLessonHTML(courseSlug, themeSlug, lessonSlug).default
-      currentLesson = lessons.filter((lesson) => lesson.slug === lessonSlug)[0]
+      const lesson = await store.dispatch('courses/getLesson', lessonSlug);
+      const currentTheme = await store.dispatch('courses/getLessonTheme', lessonSlug);
+      return { lesson, currentTheme }
     } catch (err) {
-      error({ statusCode: 404, message: 'Урок не найден' })
+      throw error({statusCode: 404, message: 'Урок не найден'})
     }
-
-    await store.dispatch('courses/setCurrentLessons', lessons)
-    await store.dispatch('courses/setCurrentLesson', currentLesson)
-
-    return { lessons, lessonContent }
   },
+
+  computed: {
+    ...mapState('courses/currentLesson')
+  },
+
   mounted() {
     hideFeedback()
     reviveCardQuiz()
     reviveRadioQuiz()
     reviveCheckboxQuiz()
-  },
-  methods: {
-    ...mapActions('courses', ['getLessonsOfTheme']),
   },
 }
 </script>
