@@ -1,12 +1,14 @@
 <template>
   <div>
-    <h2>Ваши курсы</h2>
-    <div class="courses">
-      <template v-for="course in courses">
-        <div :key="course.title" class="course" @click="handleClick(course)">
-          <CourseCard :course="course" />
-        </div>
-      </template>
+    <div v-for="sprint in sprints" :key="sprint.slug" class="sprint">
+      <h2>{{ sprint.title }}</h2>
+      <div class="courses">
+        <template v-for="course in sprint.courses">
+          <div :key="course.title" class="course" @click="handleClick(course)">
+            <CourseCard :course="course" />
+          </div>
+        </template>
+      </div>
     </div>
     <CourseDialog :active.sync="active" :course="selectedCourse" />
   </div>
@@ -24,7 +26,7 @@ export default {
     CourseDialog,
   },
   async asyncData({ store }) {
-    await store.dispatch('courses/getCoursesList')
+    await store.dispatch('courses/getSprintsList')
   },
   data() {
     return {
@@ -33,7 +35,7 @@ export default {
     }
   },
   computed: {
-    ...mapState('courses', ['courses']),
+    ...mapState('courses', ['sprints']),
   },
   mounted() {
     // console.log(this.courses)

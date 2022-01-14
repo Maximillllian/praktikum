@@ -2,6 +2,7 @@
 
 export const state = () => ({
   courseName: 'designer-interfaces',
+  sprints: [],
   courses: [],
   currentLesson: {},
   currentTheme: {}
@@ -10,6 +11,9 @@ export const state = () => ({
 export const mutations = {
   setCoursesList(state, courses) {
     state.courses = courses
+  },
+  setSprintsList(state, sprints) {
+    state.sprints = sprints
   },
   setCurrentLesson(state, lesson) {
     state.currentLesson = lesson
@@ -23,6 +27,11 @@ export const actions = {
   async getCoursesList({ commit }) {
     const courses = await this.$axios.$get('/courses/')
     commit('setCoursesList', courses)
+  },
+
+  async getSprintsList({ commit }) {
+    const sprints = await this.$axios.$get('/sprints/')
+    commit('setSprintsList', sprints)
   },
 
   async getLesson({ commit }, lessonSlug) {
