@@ -1,10 +1,10 @@
 <template>
     <vs-card type="3">
         <template #title>
-            <h3>{{ course.title }}</h3>
+            <h3>{{ module.title }}</h3>
         </template>
         <template #img>
-            <img :src="course.image" alt="">
+            <img :src="module.image" alt="">
         </template>
         <template #text>
             <p>{{ themesCount }} тем/а</p>
@@ -15,7 +15,7 @@
 <script>
 export default {
     props: {
-        course: {
+        module: {
             type: Object,
             default() {
                 return {
@@ -28,7 +28,7 @@ export default {
     },
     computed: {
         themesCount() {
-            return this.course.themes.length
+            return this.module.themes.length
         }
     }
 }

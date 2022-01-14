@@ -1,36 +1,36 @@
 <template>
-  <div>
+  <div class="sprints">
     <div v-for="sprint in sprints" :key="sprint.slug" class="sprint">
       <h2>{{ sprint.title }}</h2>
-      <div class="courses">
-        <template v-for="course in sprint.courses">
-          <div :key="course.title" class="course" @click="handleClick(course)">
-            <CourseCard :course="course" />
+      <div class="modules">
+        <template v-for="module in sprint.modules">
+          <div :key="module.title" class="module" @click="handleClick(module)">
+            <ModuleCard :module="module" />
           </div>
         </template>
       </div>
     </div>
-    <CourseDialog :active.sync="active" :course="selectedCourse" />
+    <ModuleDialog :active.sync="active" :module="selectedModule" />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import CourseCard from '~/components/course-card'
-import CourseDialog from '~/components/course-lessons-dialog'
+import ModuleCard from '~/components/module-card'
+import ModuleDialog from '~/components/module-lessons-dialog'
 
 export default {
   name: 'InterfacesIndex',
   components: {
-    CourseCard,
-    CourseDialog,
+    ModuleCard,
+    ModuleDialog,
   },
   async asyncData({ store }) {
     await store.dispatch('courses/getSprintsList')
   },
   data() {
     return {
-      selectedCourse: null,
+      selectedModule: null,
       active: false,
     }
   },
@@ -38,11 +38,11 @@ export default {
     ...mapState('courses', ['sprints']),
   },
   mounted() {
-    // console.log(this.courses)
+    // console.log(this.modules)
   },
   methods: {
-    handleClick(course) {
-      this.selectedCourse = course
+    handleClick(module) {
+      this.selectedModule = module
       this.active = true
     },
   },
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.courses {
+.modules {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-columns: 1fr 1fr 1fr;
@@ -67,6 +67,10 @@ export default {
   }
 }
 
-.course {
+.sprints {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  // padding-top: 2rem;
 }
 </style>

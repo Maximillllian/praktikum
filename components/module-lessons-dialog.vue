@@ -1,7 +1,7 @@
 <template>
-  <vs-dialog v-if="course" v-model="activeCopy" blur @close="handleClose">
+  <vs-dialog v-if="module" v-model="activeCopy" blur @close="handleClose">
     <template #header>
-      <h3>{{ course.title }}</h3>
+      <h3>{{ module.title }}</h3>
     </template>
     <vs-table>
       <template #thead>
@@ -12,7 +12,7 @@
       </template>
 
       <template #tbody>
-        <vs-tr v-for="theme in course.themes" :key="theme.title">
+        <vs-tr v-for="theme in module.themes" :key="theme.title">
           <vs-td>{{ theme.title }}</vs-td>
           <vs-td>{{ theme.lessons.length }}</vs-td>
 
@@ -28,7 +28,7 @@
                 <vs-tr
                   v-for="lesson in theme.lessons"
                   :key="lesson.title"
-                  @click.prevent="goToCourseLesson(course, theme, lesson)"
+                  @click.prevent="goToModuleLesson(module, theme, lesson)"
                 >
                   <vs-td>{{ lesson.title }}</vs-td>
                   <vs-td>Нет</vs-td>
@@ -37,7 +37,7 @@
             </vs-table>
             <!-- <ol>
                 <li v-for="(lesson, idx) in theme.lessons" :key="idx">
-                  <a @click.prevent="goToCourseLesson(course, theme, lesson)">{{ lesson.title }}</a>
+                  <a @click.prevent="goToModuleLesson(module, theme, lesson)">{{ lesson.title }}</a>
                 </li>
               </ol> -->
           </template>
@@ -49,13 +49,13 @@
 
 <script>
 export default {
-  name: 'CourseDialog',
+  name: 'ModuleDialog',
   props: {
     active: {
       type: Boolean,
       default: false,
     },
-    course: {
+    module: {
       type: Object,
       default() {
         return {}
@@ -76,7 +76,7 @@ export default {
     handleClose() {
       this.$emit('update:active', false)
     },
-    goToCourseLesson(course, theme, lesson) {
+    goToModuleLesson(module, theme, lesson) {
       if (lesson.url) {
         window.open(lesson.url, '_blank').focus()
       } else {
