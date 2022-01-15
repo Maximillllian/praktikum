@@ -48,7 +48,7 @@ export default {
   // margin-bottom: 50px;
 
   * {
-    color: white !important;
+    color: #dedede !important;
     background-color: var(--black) !important;
   }
 
