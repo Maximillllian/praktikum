@@ -4,8 +4,8 @@
             <h3>{{ module.title }}</h3>
         </template>
         <template #img>
-            <!-- <img :src="module.image" alt=""> -->
-            <img src="img/courses-cards/4-4.svg" alt="">
+            <img :src="module.image" alt="">
+            <!-- <img src="img/courses-cards/4-4.svg" alt=""> -->
         </template>
         <template #text>
             <p>{{ themesCount }} тем/а</p>
