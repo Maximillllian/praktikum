@@ -114,3 +114,19 @@ export function reviveImageGallery() {
     })
   })
 }
+
+export function reviveExpanders() {
+  const expander = document.querySelector('.content-expander')
+  const expanderButton = expander.querySelector('button')
+  // const nextSections = document.querySelectorAll('.content-expander ~ *')
+
+  const expandedClass = 'content-expander_expanded'
+  expander.classList.remove(expandedClass)
+  expanderButton.innerText = 'Кликни, чтобы показать решение'
+  expanderButton.classList = ''
+
+  expanderButton.addEventListener('click', () => {
+    expander.classList.add(expandedClass)
+  })
+
+}

@@ -13,6 +13,7 @@ import {
   hideFeedback,
   reviveCheckboxQuiz,
   reviveImageGallery,
+  reviveExpanders,
 } from '~/assets/js/lesson-interactions'
 
 export default {
@@ -21,7 +22,7 @@ export default {
   
   async asyncData({ store, params, error }) {
     const lessonSlug = params.slug;
-    
+
     try {
       const lesson = await store.dispatch('courses/getLesson', lessonSlug);
       const currentTheme = await store.dispatch('courses/getLessonTheme', lessonSlug);
@@ -41,6 +42,7 @@ export default {
     reviveRadioQuiz()
     reviveCheckboxQuiz()
     reviveImageGallery()
+    reviveExpanders()
   },
 }
 </script>
@@ -72,6 +74,23 @@ export default {
 
     .paragraph {
       color: var(--answer-color) !important;
+    }
+  }
+
+  .content-expander  {
+
+    button {
+      padding: 7px 15px;
+      background: white !important;
+      color: black !important;
+      border-radius: 20px;
+      transition: all .15s ease-in-out;
+
+      &:hover {
+        background: black !important;
+        color: #dedede !important;
+        border: 1px solid gray;
+      }
     }
   }
 }
