@@ -12,7 +12,8 @@ import {
   reviveRadioQuiz,
   hideFeedback,
   reviveCheckboxQuiz,
-} from '~/assets/js/quiz'
+  reviveImageGallery,
+} from '~/assets/js/lesson-interactions'
 
 export default {
   name: 'LessonIndex',
@@ -20,7 +21,7 @@ export default {
   
   async asyncData({ store, params, error }) {
     const lessonSlug = params.slug;
-    console.log('params', params)
+    
     try {
       const lesson = await store.dispatch('courses/getLesson', lessonSlug);
       const currentTheme = await store.dispatch('courses/getLessonTheme', lessonSlug);
@@ -39,6 +40,7 @@ export default {
     reviveCardQuiz()
     reviveRadioQuiz()
     reviveCheckboxQuiz()
+    reviveImageGallery()
   },
 }
 </script>

@@ -101,3 +101,16 @@ export function reviveCheckboxQuiz() {
         })
     })
 }
+
+export function reviveImageGallery() {
+  const imageGallerySections = document.querySelectorAll('.image-gallery');
+  imageGallerySections.forEach(section => {
+    const sliderImages = section.querySelectorAll('.image-gallery__slider-image');
+    const mainImage = section.querySelector('.image-gallery__main-image');
+    sliderImages.forEach(image => {
+      image.addEventListener('click', () => {
+        mainImage.style.backgroundImage = `url(${image.src})`
+      })
+    })
+  })
+}
