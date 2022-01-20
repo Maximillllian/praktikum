@@ -77,8 +77,8 @@ export default {
       this.$emit('update:active', false)
     },
     goToModuleLesson(module, theme, lesson) {
-      if (lesson.url) {
-        window.open(lesson.url, '_blank').focus()
+      if (lesson.webinar_link) {
+        window.open(lesson.webinar_link, '_blank').focus()
       } else {
         this.$router.push(
           `/designer-interfaces/lesson/${lesson.slug}`
