@@ -42,13 +42,18 @@ export function reviveRadioQuiz() {
         const target = event.srcElement
         const classes = target.classList
         let targetQuiz
+        let selectedOption
         if (classes.contains('radio__control')) {
+          selectedOption = target.parentNode
           targetQuiz = target.parentNode.parentNode.parentNode
         } else if (classes.contains('radio')) {
+          selectedOption = target.parentNode
           targetQuiz = target.parentNode.parentNode
         } else if (classes.contains('radio__label')) {
+          selectedOption = target.parentNode
           targetQuiz = target.parentNode.parentNode.parentNode
         }
+        selectedOption.classList.add('checked')
         targetQuiz.classList.add('selected')
         removeHiddenElements(targetQuiz)
         //   console.log('just fucking', target.classList)
@@ -117,7 +122,8 @@ export function reviveImageGallery() {
 
 export function reviveExpanders() {
   const expander = document.querySelector('.content-expander')
-  const expanderButton = expander.querySelector('button')
+  try {
+    const expanderButton = expander.querySelector('button')
   // const nextSections = document.querySelectorAll('.content-expander ~ *')
 
   const expandedClass = 'content-expander_expanded'
@@ -128,5 +134,34 @@ export function reviveExpanders() {
   expanderButton.addEventListener('click', () => {
     expander.classList.add(expandedClass)
   })
+  } catch (err) {
+    console.log(err)
+  }
+}
 
+export function reviveImageComparers() {
+  const imageComparers = document.querySelectorAll('.image-comparer')
+  imageComparers.forEach(comparer => {
+    const firstImageBox = comparer.querySelectorAll('.split-view-sc-default__pane')[0]
+    const resizer = comparer.querySelector('.split-view-sc-default__resizer');
+    const leftDivide = comparer.getBoundingClientRect().left
+    let isDrawing = false;
+
+    resizer.addEventListener('mousedown', e => {
+      isDrawing = true
+    })
+
+    document.addEventListener('mouseup', e => {
+      isDrawing = false
+    })
+
+    comparer.addEventListener('mousemove', e => {
+      if (isDrawing === true) {
+        const cursorX = e.pageX - leftDivide;
+        firstImageBox.style.flexBasis = cursorX / comparer.clientWidth * 100  + '%'
+        console.log('Flex basis', firstImageBox.style.flexBasis)
+        resizer.style.left = cursorX - (resizer.offsetWidth / 2) + 'px'
+      }
+    })
+  })
 }

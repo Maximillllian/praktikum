@@ -14,26 +14,30 @@ import {
   reviveCheckboxQuiz,
   reviveImageGallery,
   reviveExpanders,
+  reviveImageComparers,
 } from '~/assets/js/lesson-interactions'
 
 export default {
   name: 'LessonIndex',
   layout: 'lesson',
-  
+
   async asyncData({ store, params, error }) {
-    const lessonSlug = params.slug;
+    const lessonSlug = params.slug
 
     try {
-      const lesson = await store.dispatch('courses/getLesson', lessonSlug);
-      const currentTheme = await store.dispatch('courses/getLessonTheme', lessonSlug);
+      const lesson = await store.dispatch('courses/getLesson', lessonSlug)
+      const currentTheme = await store.dispatch(
+        'courses/getLessonTheme',
+        lessonSlug
+      )
       return { lesson, currentTheme }
     } catch (err) {
-      throw error({statusCode: 404, message: 'Урок не найден'})
+      throw error({ statusCode: 404, message: 'Урок не найден' })
     }
   },
 
   computed: {
-    ...mapState('courses/currentLesson')
+    ...mapState('courses/currentLesson'),
   },
 
   mounted() {
@@ -43,6 +47,7 @@ export default {
     reviveCheckboxQuiz()
     reviveImageGallery()
     reviveExpanders()
+    reviveImageComparers()
   },
 }
 </script>
@@ -77,14 +82,34 @@ export default {
     }
   }
 
-  .content-expander  {
+  .quiz__item:not(.quiz__item_correct) {
+    .quiz__feedback {
+      .paragraph {
+        color: rgb(252, 112, 112) !important;
+      }
+    }
+  }
 
+  .checked {
+    .radio__control {
+      background-color: #dedede !important;
+    }
+  }
+
+  .split-view-sc-default {
+    .split-view-sc-default__pane:first-child {
+      flex-grow: initial !important;
+      flex-basis: 50%;
+    }
+  }
+
+  .content-expander {
     button {
       padding: 7px 15px;
       background: white !important;
       color: black !important;
       border-radius: 20px;
-      transition: all .15s ease-in-out;
+      transition: all 0.15s ease-in-out;
 
       &:hover {
         background: black !important;
@@ -135,9 +160,6 @@ export default {
 
 // Когда на вопрос ответили
 .selected .quiz__group.selected {
-  .quiz__item {
-  }
-
   .quiz__item:hover {
     opacity: 1 !important;
   }
@@ -168,9 +190,5 @@ export default {
 
 #lesson .page__content {
   min-width: 0 !important;
-}
-
-#lesson .theory-viewer__block_type_vertical-layout.theory-viewer__block {
-  //   max-width: 700px !important;
 }
 </style>
