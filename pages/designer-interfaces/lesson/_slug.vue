@@ -74,6 +74,10 @@ export default {
     }
   }
 
+  .tabs__item-content {
+    justify-content: center;
+  }
+
   .quiz__feedback {
     color: var(--answer-color) !important;
 
