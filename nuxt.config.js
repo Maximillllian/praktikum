@@ -52,7 +52,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+    'nuxt-material-design-icons-iconfont'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -80,17 +81,16 @@ export default {
         exclude: /(node_modules)/,
       })
     },
-
-    postcss: {
-      plugins: [require('vuesax')],
-    }
   },
+
+  postcss: false,
 
   router: {
     middleware: ['auth']
   },
 
   auth: {
+    localStorage: false,
     strategies: {
       local: {
         scheme: 'refresh',

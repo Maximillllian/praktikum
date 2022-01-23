@@ -31,7 +31,10 @@
                   @click.prevent="goToModuleLesson(module, theme, lesson)"
                 >
                   <vs-td>{{ lesson.title }}</vs-td>
-                  <vs-td>Нет</vs-td>
+                  <vs-td v-if="lesson.is_complete">
+                    <span class="material-icons"> done_all </span>
+                  </vs-td>
+                  <vs-td v-else> </vs-td>
                 </vs-tr>
               </template>
             </vs-table>
@@ -59,7 +62,7 @@ export default {
       type: Object,
       default() {
         return {}
-      }
+      },
     },
   },
   data() {
@@ -80,9 +83,7 @@ export default {
       if (lesson.webinar_link) {
         window.open(lesson.webinar_link, '_blank').focus()
       } else {
-        this.$router.push(
-          `/designer-interfaces/lesson/${lesson.slug}`
-        )
+        this.$router.push(`/designer-interfaces/lesson/${lesson.slug}`)
       }
     },
   },
