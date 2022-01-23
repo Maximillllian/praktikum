@@ -5,7 +5,7 @@ export const state = () => ({
   sprints: [],
   modules: [],
   currentLesson: {},
-  currentTheme: {}
+  currentTheme: null
 })
 
 export const mutations = {
@@ -40,7 +40,23 @@ export const actions = {
     return lesson
   },
 
-  async getLessonTheme({ commit }, lessonSlug) {
+  async getLessonTheme({ commit, state }, lessonSlug) {
+
+    // If theme is already loaded, we return existing theme
+    if (state.currentTheme) {
+      const themeLessonsSlugs = [];
+
+      // Get all lessons in current theme
+      state.currentTheme.lessons.forEach(lesson => {
+        themeLessonsSlugs.push(lesson.slug)
+      });
+
+      // If lesson is in theme lessons array, return existing theme
+      if (themeLessonsSlugs.includes(lessonSlug)) {
+        return state.currentTheme
+      }
+    }
+
     const theme = await this.$axios.$get(`/lesson/${lessonSlug}/theme`)
     commit('setCurrentTheme', theme) 
     return theme

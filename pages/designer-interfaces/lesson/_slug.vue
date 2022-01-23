@@ -30,8 +30,7 @@ export default {
         'courses/getLessonTheme',
         lessonSlug
       )
-      const completeLesson = await store.dispatch('courses/completeLesson', lessonSlug)
-      console.log(completeLesson)
+      store.dispatch('courses/completeLesson', lessonSlug)
       return { lesson, currentTheme }
     } catch (err) {
       throw error({ statusCode: 404, message: 'Урок не найден' })
