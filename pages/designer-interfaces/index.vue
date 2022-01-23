@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 import ModuleCard from '~/components/module-card'
 import ModuleDialog from '~/components/module-lessons-dialog'
 
@@ -41,9 +41,15 @@ export default {
     // console.log(this.modules)
   },
   methods: {
-    handleClick(module) {
-      this.selectedModule = module
-      this.active = true
+    ...mapActions('courses', ['getModule']),
+    async handleClick(module) {
+      try {
+        const moduleData = await this.getModule(module.slug)
+        this.selectedModule = moduleData
+        this.active = true
+      } catch (err) {
+        throw new Error(err)
+      }
     },
   },
 }

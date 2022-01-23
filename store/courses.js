@@ -46,6 +46,11 @@ export const actions = {
     return theme
   },
 
+  async getModule(ctx, moduleSlug) {
+    const module = await this.$axios.$get(`/module/${moduleSlug}`)
+    return module
+  },
+
   async completeLesson(ctx,     lessonSlug) {
     const res = await this.$axios.$put(`/complete/lesson/${lessonSlug}/`)
     return res
