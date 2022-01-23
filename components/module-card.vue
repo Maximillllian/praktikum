@@ -29,7 +29,7 @@ export default {
     },
     computed: {
         themesCount() {
-            return this.module.themes.length
+            return this.module.themes_count
         }
     }
 }
