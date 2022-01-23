@@ -1,5 +1,5 @@
 <template>
-  <vs-sidebar v-model="active" relative hover-expand reduce open>
+  <vs-sidebar v-model="active" :open="openSidebar" relative hover-expand reduce>
     <template #logo> Тема: {{ currentTheme.title }} </template>
     <vs-sidebar-item
       v-for="lesson in currentLessons"
@@ -7,10 +7,18 @@
       :key="lesson.slug"
       :to="`./${lesson.slug}`"
     >
+      <template #icon>
+        <span v-if="lesson.is_complete" class="material-icons"
+          >done_all</span
+        >
+        <span v-else class="material-icons"> donut_large </span>
+      </template>
       {{ lesson.title }}
     </vs-sidebar-item>
     <vs-button border :to="`/${courseName}`">К курсам</vs-button>
-    <vs-button v-if="!isLastTheme" :to="`/${courseName}/lesson/${nextThemeFirstLessonSlug}`"
+    <vs-button
+      v-if="!isLastTheme"
+      :to="`/${courseName}/lesson/${nextThemeFirstLessonSlug}`"
       >Следующая тема</vs-button
     >
   </vs-sidebar>
@@ -20,13 +28,13 @@
 import { mapState, mapGetters } from 'vuex'
 
 export default {
-  // async asyncData({ store, params }) {
-  //   const lessonSlug = params.slug
-  //   console.log('Мы вошли')
-    
-  //   console.log('current theme', currentTheme)
-  //   return { currentTheme }
-  // },
+  props: {
+    openSidebar: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+  },
 
   data() {
     return {
@@ -35,12 +43,16 @@ export default {
   },
 
   computed: {
-    ...mapState('courses', [
-      'courseName',
-      'currentLesson',
-      'currentTheme'
+    ...mapState('courses', ['courseName', 'currentLesson', 'currentTheme']),
+    ...mapGetters('courses', [
+      'currentLessons',
+      'isLastTheme',
+      'nextThemeFirstLessonSlug',
     ]),
-    ...mapGetters('courses', ['currentLessons', 'isLastTheme', 'nextThemeFirstLessonSlug'])
+    isTabletOrLess() {
+      const matchTablet = window.matchMedia('(max-width: 991.98px)')
+      return matchTablet.matches
+    },
   },
 
   mounted() {
@@ -51,11 +63,11 @@ export default {
 
 <style lang="scss">
 .vs-button {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .vs-sidebar__logo {
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   margin-left: 10px;
   padding-bottom: 0;
 }
@@ -67,8 +79,8 @@ aside .reduce {
   }
 
   .vs-button {
-      transform: translateX(-200px);
-      opacity: 0;
+    transform: translateX(-200px);
+    opacity: 0;
   }
 }
 
