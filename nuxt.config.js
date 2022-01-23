@@ -83,7 +83,7 @@ export default {
     },
   },
 
-  postcss: false,
+  // postcss: false,
 
   router: {
     middleware: ['auth']
