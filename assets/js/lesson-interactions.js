@@ -185,3 +185,53 @@ export function reviveQuizeSlider() {
     })
   })
 }
+
+export function reviveQuizeChoises() {
+
+  // В оригинальном виде восстановить quiz не удалось, потому что правильные ответы
+  // приходили с сервера. Теперь просто помечаются правильные и неправильные ответы, 
+  // которые оставил автор документов
+  const quizeSections = document.querySelectorAll('.theory-viewer__block_type_quiz-choice')
+
+  quizeSections.forEach(section => {
+    const questions = section.querySelectorAll('.quiz__question')
+    const submitButton = createSubmitButton()
+    section.appendChild(submitButton)
+
+    questions.forEach(question => {
+      // const selectedText = question.querySelector('.quiz__select-text')
+      // const options = menu.querySelectorAll('.select__item')
+      let questionCorrectClass;
+      if (question.classList.contains('quiz__question_incorrect')) {
+        questionCorrectClass = 'quiz__question_incorrect'
+      } else if (question.classList.contains('quiz__question_correct')) {
+        questionCorrectClass = 'quiz__question_correct'
+      }
+      question.classList.toggle(questionCorrectClass)
+
+      submitButton.addEventListener('click', () => {
+        question.classList.toggle(questionCorrectClass)
+      })
+
+
+      const button = question.querySelector('.select-default__toggle')
+      const menu = question.querySelector('.select-default__menu')
+      menu.style.opacity = '100%'
+      menu.style.display = 'initial'
+      menu.classList.add('hidden')
+
+      button.style.cursor = 'pointer'
+      button.addEventListener('click', () => {
+        menu.classList.toggle('hidden')
+
+        // options.forEach(option => {
+        //   option.style.pointerEvents = 'auto'
+        //   option.addEventListener('click', () => {
+        //     menu.style.display = 'none'
+        //     selectedText.innerText = option.innerText
+        //   })
+        // })
+      })
+    })
+  })
+}

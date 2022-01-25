@@ -15,7 +15,8 @@ import {
   reviveImageGallery,
   reviveExpanders,
   reviveImageComparers,
-  reviveQuizeSlider
+  reviveQuizeSlider,
+  reviveQuizeChoises
 } from '~/assets/js/lesson-interactions'
 
 export default {
@@ -51,6 +52,7 @@ export default {
     reviveExpanders()
     reviveImageComparers()
     reviveQuizeSlider()
+    reviveQuizeChoises()
   },
 }
 </script>
@@ -60,7 +62,7 @@ export default {
   // margin-bottom: 50px;
 
   * {
-    color: #dedede !important;
+    color: #dedede;
     background-color: var(--black) !important;
   }
 
@@ -95,6 +97,30 @@ export default {
         color: rgb(252, 112, 112) !important;
       }
     }
+  }
+
+  .quiz__question {
+    color: var(--answer-color) !important;
+  }
+
+  .quiz_type_choice.quiz_answered .quiz__feedback, .quiz_type_choice.quiz_answered .quiz__select {
+    color: var(--answer-color) !important;
+
+    .select__toggle {
+      color: var(--answer-color) !important;
+    }
+
+    .quiz__select-text {
+      color: var(--answer-color) !important;
+    }
+  }
+
+  .theory-viewer__block_type_quiz-choice {
+
+    .select__item:hover {
+      background-color: rgb(133, 131, 131) !important;
+    } 
+
   }
 
   .checked {
