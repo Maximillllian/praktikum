@@ -15,6 +15,7 @@ import {
   reviveImageGallery,
   reviveExpanders,
   reviveImageComparers,
+  reviveQuizeSlider
 } from '~/assets/js/lesson-interactions'
 
 export default {
@@ -49,6 +50,7 @@ export default {
     reviveImageGallery()
     reviveExpanders()
     reviveImageComparers()
+    reviveQuizeSlider()
   },
 }
 </script>

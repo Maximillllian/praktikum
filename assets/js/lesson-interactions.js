@@ -165,3 +165,23 @@ export function reviveImageComparers() {
     })
   })
 }
+
+export function reviveQuizeSlider() {
+  const sliders = document.querySelectorAll('.slider .slider__content-scrollable-area');
+
+  sliders.forEach(slider => {
+    const quizeSections = slider.querySelectorAll('.quiz__section-list-wrapper')
+
+    quizeSections.forEach(section => {
+      const answer = section.querySelector('.quiz__section-content')
+      const button = section.querySelector('.quiz__feedback-button')
+  
+      if (answer && button) {
+        answer.style.opacity = 0
+        button.addEventListener('click', () => {
+          answer.style.opacity = '100%'
+        })
+      }
+    })
+  })
+}
