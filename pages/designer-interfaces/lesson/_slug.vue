@@ -44,7 +44,7 @@ export default {
     ...mapGetters('courses', ['currentLessonSlug']),
   },
 
-  beforeDestroy() {
+  created() {
     this.$store.dispatch('courses/completeLesson', this.currentLessonSlug)
   },
 
