@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import RegisterDialog from '~/components/RegisterDialog'
+import RegisterDialog from '~/components/auth/RegisterDialog'
 
 export default {
     name: 'RegisterPage',

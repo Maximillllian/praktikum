@@ -1,6 +1,12 @@
 <template>
-  <vs-sidebar v-model="active" :open="openSidebar" relative hover-expand reduce>
-    <template #logo> Тема: {{ currentTheme.title }} </template>
+  <vs-sidebar
+    v-model="currentLessonSlug"
+    :open="openSidebar"
+    relative
+    hover-expand
+    reduce
+  >
+    <template #logo> Тема: {{ currentThemeTitle }} </template>
     <vs-sidebar-item
       v-for="lesson in currentLessons"
       :id="lesson.slug"
@@ -8,9 +14,7 @@
       :to="`./${lesson.slug}`"
     >
       <template #icon>
-        <span v-if="lesson.is_complete" class="material-icons"
-          >done_all</span
-        >
+        <span v-if="lesson.is_complete" class="material-icons">done_all</span>
         <span v-else class="material-icons"> donut_large </span>
       </template>
       {{ lesson.title }}
@@ -36,27 +40,20 @@ export default {
     },
   },
 
-  data() {
-    return {
-      active: '',
-    }
-  },
-
   computed: {
-    ...mapState('courses', ['courseName', 'currentLesson', 'currentTheme']),
+    ...mapState('courses', ['courseName', 'currentLesson']),
     ...mapGetters('courses', [
       'currentLessons',
+      'currentLessonSlug',
+      'currentThemeTitle',
       'isLastTheme',
       'nextThemeFirstLessonSlug',
     ]),
+
     isTabletOrLess() {
       const matchTablet = window.matchMedia('(max-width: 991.98px)')
       return matchTablet.matches
     },
-  },
-
-  mounted() {
-    this.active = this.currentLesson.slug
   },
 }
 </script>

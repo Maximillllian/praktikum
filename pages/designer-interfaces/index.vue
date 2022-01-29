@@ -4,13 +4,13 @@
       <h2>{{ sprint.title }}</h2>
       <div class="modules">
         <template v-for="module in sprint.modules">
-          <div :key="module.title" class="module" @click="handleClick(module)">
+          <div :key="module.title" class="module" @click="openModule(module)">
             <ModuleCard :module="module" />
           </div>
         </template>
       </div>
     </div>
-    <ModuleDialog :active.sync="active" :module="selectedModule" />
+    <ModuleDialog :active.sync="active" :module="selectedModule" @close="clearSelectedModule" />
   </div>
 </template>
 
@@ -25,32 +25,37 @@ export default {
     ModuleCard,
     ModuleDialog,
   },
+
   async asyncData({ store }) {
     await store.dispatch('courses/getSprintsList')
   },
+
   data() {
     return {
       selectedModule: null,
       active: false,
     }
   },
+
   computed: {
     ...mapState('courses', ['sprints']),
   },
-  mounted() {
-    // console.log(this.modules)
-  },
+
   methods: {
     ...mapActions('courses', ['getModule']),
-    async handleClick(module) {
+    async openModule(module) {
       try {
+        this.active = true
         const moduleData = await this.getModule(module.slug)
         this.selectedModule = moduleData
-        this.active = true
       } catch (err) {
         throw new Error(err)
       }
     },
+
+    clearSelectedModule() {
+      this.selectedModule = null
+    }
   },
 }
 </script>

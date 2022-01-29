@@ -12,30 +12,26 @@
       </vs-navbar-item>
       <template #right>
         <template v-if="!isLoggedIn">
-          <vs-button flat @click="dialogActive = true">Войти</vs-button>
+          <vs-button flat to="/login">Войти</vs-button>
           <vs-button>Зарегистрироваться</vs-button>
         </template>
         <template v-else>
-          <vs-button flat @click="$auth.logout()">Выйти</vs-button>
+          <vs-button flat :loading="buttonLoading" @click="$auth.logout()">Выйти</vs-button>
           <vs-button disabled>Профиль</vs-button>
         </template>
       </template>
     </vs-navbar>
-    <LoginDialog :active.sync="dialogActive" />
   </div>
 </template>
 
 <script>
-import LoginDialog from '~/components/LoginDialog'
 
 export default {
-  components: {
-    LoginDialog,
-  },
   data() {
     return {
       dialogActive: false,
-      isTabletOrLess: false
+      isTabletOrLess: false,
+      buttonLoading: false
     }
   },
   computed: {
@@ -48,6 +44,19 @@ export default {
     const matchTablet = window.matchMedia('(max-width: 991.98px)')
     if (matchTablet.matches) {
       this.isTabletOrLess = true
+    }
+  },
+
+  methods: {
+    async logout() {
+      this.buttonLoading = true
+      try {
+        await this.$auth.logout()
+      } catch (err) {
+        throw new Error(err)
+      } finally {
+        this.buttonLoading = false
+      }
     }
   }
 }

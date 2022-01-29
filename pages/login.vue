@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import LoginDialog from '~/components/LoginDialog'
+import LoginDialog from '~/components/auth/LoginDialog'
 
 export default {
     name: 'LoginPage',

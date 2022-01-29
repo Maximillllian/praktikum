@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import {
   reviveCardQuiz,
   reviveRadioQuiz,
@@ -16,7 +16,7 @@ import {
   reviveExpanders,
   reviveImageComparers,
   reviveQuizeSlider,
-  reviveQuizeChoises
+  reviveQuizeChoises,
 } from '~/assets/js/lesson-interactions'
 
 export default {
@@ -32,7 +32,7 @@ export default {
         'courses/getLessonTheme',
         lessonSlug
       )
-      store.dispatch('courses/completeLesson', lessonSlug)
+
       return { lesson, currentTheme }
     } catch (err) {
       throw error({ statusCode: 404, message: 'Урок не найден' })
@@ -41,6 +41,11 @@ export default {
 
   computed: {
     ...mapState('courses/currentLesson'),
+    ...mapGetters('courses', ['currentLessonSlug']),
+  },
+
+  beforeDestroy() {
+    this.$store.dispatch('courses/completeLesson', this.currentLessonSlug)
   },
 
   mounted() {
@@ -103,7 +108,8 @@ export default {
     color: var(--answer-color) !important;
   }
 
-  .quiz_type_choice.quiz_answered .quiz__feedback, .quiz_type_choice.quiz_answered .quiz__select {
+  .quiz_type_choice.quiz_answered .quiz__feedback,
+  .quiz_type_choice.quiz_answered .quiz__select {
     color: var(--answer-color) !important;
 
     .select__toggle {
@@ -116,11 +122,9 @@ export default {
   }
 
   .theory-viewer__block_type_quiz-choice {
-
     .select__item:hover {
       background-color: rgb(133, 131, 131) !important;
-    } 
-
+    }
   }
 
   .checked {

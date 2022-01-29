@@ -58,8 +58,8 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.BASE_URL || 'http://localhost:8000/api/',
-    // baseURL: 'https://cryptodeputat.pythonanywhere.com/api'
+    // baseURL: process.env.BASE_URL || 'http://localhost:8000/api/',
+    baseURL: 'https://cryptodeputat.pythonanywhere.com/api'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

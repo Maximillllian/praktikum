@@ -20,6 +20,13 @@ export const mutations = {
   },
   setCurrentTheme(state, theme) {
     state.currentTheme = theme
+  },
+  markLessonAsComplete(state, slug) {
+    state.currentTheme.lessons.forEach(lesson => {
+      if (lesson.slug === slug) {
+        lesson.is_complete = true
+      } 
+    })
   }
 }
 
@@ -67,7 +74,8 @@ export const actions = {
     return module
   },
 
-  async completeLesson(ctx,     lessonSlug) {
+  async completeLesson({ commit }, lessonSlug) {
+    commit('markLessonAsComplete', lessonSlug)
     const res = await this.$axios.$put(`/complete/lesson/${lessonSlug}/`)
     return res
   }
@@ -78,6 +86,12 @@ export const actions = {
 export const getters = {
   currentLessons(state) {
     return state.currentTheme.lessons
+  },
+  currentLessonSlug(state) {
+    return state.currentLesson.slug
+  },
+  currentThemeTitle(state) {
+    return state.currentTheme.title
   },
   isLastTheme(state) {
     return state.currentTheme.is_last
