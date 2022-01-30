@@ -11,11 +11,14 @@
       v-for="lesson in currentLessons"
       :id="lesson.slug"
       :key="lesson.slug"
-      :to="`./${lesson.slug}`"
+      @click.native="goToLesson(lesson.slug)"
     >
       <template #icon>
-        <span v-if="lesson.is_complete" class="material-icons">done_all</span>
-        <span v-else class="material-icons"> donut_large </span>
+        <div :ref="lesson.slug"></div>
+        <template v-if="!loading">
+          <span v-if="lesson.is_complete" class="material-icons">done_all</span>
+          <span v-else class="material-icons"> donut_large </span>
+        </template>
       </template>
       {{ lesson.title }}
     </vs-sidebar-item>
@@ -40,6 +43,12 @@ export default {
     },
   },
 
+  data() {
+    return {
+      loading: false
+    }
+  },
+
   computed: {
     ...mapState('courses', ['courseName', 'currentLesson']),
     ...mapGetters('courses', [
@@ -55,6 +64,18 @@ export default {
       return matchTablet.matches
     },
   },
+
+  methods: {
+    goToLesson(lessonSlug) {
+      const loading = this.$vs.loading({
+        target: this.$refs[lessonSlug][0],
+        scale: '0.6',
+        type: 'waves'
+      })
+      this.$router.push(`./${lessonSlug}`)
+      loading.close()
+    }
+  }
 }
 </script>
 
