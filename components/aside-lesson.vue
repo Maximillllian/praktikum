@@ -14,11 +14,8 @@
       @click.native="goToLesson(lesson.slug)"
     >
       <template #icon>
-        <div :ref="lesson.slug"></div>
-        <template v-if="!loading">
           <span v-if="lesson.is_complete" class="material-icons">done_all</span>
-          <span v-else class="material-icons"> donut_large </span>
-        </template>
+          <span v-else :class="{ loading: lessonLoadingSlug === lesson.slug }" class="material-icons"> donut_large </span>
       </template>
       {{ lesson.title }}
     </vs-sidebar-item>
@@ -45,7 +42,7 @@ export default {
 
   data() {
     return {
-      loading: false
+      lessonLoadingSlug: ''
     }
   },
 
@@ -67,13 +64,9 @@ export default {
 
   methods: {
     goToLesson(lessonSlug) {
-      const loading = this.$vs.loading({
-        target: this.$refs[lessonSlug][0],
-        scale: '0.6',
-        type: 'waves'
-      })
+      this.lessonLoadingSlug = lessonSlug
       this.$router.push(`./${lessonSlug}`)
-      loading.close()
+      // this.lessonLoadingSlug = ''
     }
   }
 }
@@ -104,5 +97,20 @@ aside .reduce {
 
 .vs-sidebar-content {
   height: calc(100vh - 90px) !important;
+}
+
+.loading {
+  color: var(--royalBlue);
+  animation: loading 1s ease infinite
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
 }
 </style>
