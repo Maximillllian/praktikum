@@ -14,7 +14,8 @@
       @click.native="goToLesson(lesson.slug)"
     >
       <template #icon>
-          <span v-if="lesson.is_complete" class="material-icons">done_all</span>
+          <span v-if="lessonLoadingSlug === lesson.slug" class="loading material-icons"> donut_large </span>
+          <span v-else-if="lesson.is_complete" class="material-icons">done_all</span>
           <span v-else :class="{ loading: lessonLoadingSlug === lesson.slug }" class="material-icons"> donut_large </span>
       </template>
       {{ lesson.title }}
@@ -62,11 +63,16 @@ export default {
     },
   },
 
+  watch: {
+    currentLessonSlug() {
+      this.lessonLoadingSlug = ''
+    }
+  },
+
   methods: {
     goToLesson(lessonSlug) {
       this.lessonLoadingSlug = lessonSlug
       this.$router.push(`./${lessonSlug}`)
-      // this.lessonLoadingSlug = ''
     }
   }
 }
